@@ -1,4 +1,4 @@
-<!--- Mainly most of the things have to be same --->
+<!--- Generic Header --->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -58,21 +58,27 @@
   </div>
 </div>
 </nav>
-  <h1> Hi , My name is Zeerak Tahir and this is my website.</h1>
+  <h1 style="text-align:center"> Hi , My name is Zeerak Tahir and this is my website.</h1>
   <p>- 1.   Navbar added<p>
     <p>- 2.  Favicon added</p>
-  <p>
-    While I am at it, feel free to look at following code and predict the output
-    <pre>
-    .....
-    Dim user As String = "Abdullah Khalid"
-    console.writeline("The original UserName is: " & user)
-    user = "Usama Sagir"
-    console.writeline("The new UserName is: " & user)
-    </pre>
-  </p>
-<p>
-  If you are new to programming, this is written in <code> VB.NET </code>
+  <h3 id = "countdown"> Countdown for First Blog Post</h3>
+  <script> 
+var deadline = new Date("Sep 21, 2019 15:37:25").getTime(); 
+var x = setInterval(function() { 
+var now = new Date().getTime(); 
+var t = deadline - now; 
+var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+document.getElementById("demo").innerHTML = days + "d "  
++ hours + "h " + minutes + "m " + seconds + "s "; 
+    if (t < 0) { 
+        clearInterval(x); 
+        document.getElementById("countdown").innerHTML = "EXPIRED"; 
+    } 
+}, 1000); 
+</script>
 <blockquote>
 <p>"The function of a good software is to make the complex appear simple"</p>
 <footer>Grady Booch</footer>
